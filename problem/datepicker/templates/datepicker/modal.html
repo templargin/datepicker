@@ -1,0 +1,32 @@
+{% extends 'datepicker/base.html' %}
+
+{% block title %}
+MODAL form page
+{% endblock %}
+
+{% block body %}
+<h5>If you click the button, form loads, and <u><b>datatime</b></u> field does NOT render properly</h5>
+
+<hr>
+
+<div class="modal fade" tabindex="-1" role="dialog" id="modal">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <!-- This is triggered by Javascript code -->
+    </div>
+  </div>
+</div>
+
+
+<button class="create-contact btn btn-primary">Add contact</button>
+
+<script type="text/javascript">
+  $(function () {
+    // Create
+    $(".create-contact").modalForm({
+        formURL: "{% url 'datepicker:create_contact' %}"
+    });
+  });
+</script>
+
+{% endblock %}

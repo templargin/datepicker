@@ -1,0 +1,17 @@
+{% extends 'datepicker/base.html' %}
+
+{% block title %}
+Home page
+{% endblock %}
+
+{% block body %}
+<h5>This is an illustration of the issue</h5>
+
+<a href="{% url 'datepicker:regular' %}">
+  <button class="btn btn-primary" type="button" name="button">Here, it is a page with REGULAR form</button>
+</a>
+
+<a href="{% url 'datepicker:modal' %}">
+  <button class="btn btn-danger" type="button" name="button">Here, it is a page where you get MODAL form</button>
+</a>
+{% endblock %}
